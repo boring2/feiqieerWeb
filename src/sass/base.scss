@@ -1,0 +1,23 @@
+body {
+  color: #fff;
+  font-family: "微软雅黑",Arial;
+  min-width: 1024px;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clear-both {
+  clear: both;
+}
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+p > img {
+  display: block;
+  margin: 0 auto
+}

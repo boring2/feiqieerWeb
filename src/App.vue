@@ -1,23 +1,31 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <app-header></app-header>
+    <navbar></navbar>
+    <banner></banner>
     <router-view></router-view>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import AppHeader from './components/AppHeader'
+import Navbar from './components/Navbar'
+import Banner from './components/Banner'
+import AppFooter from './components/AppFooter'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    AppHeader,
+    Navbar,
+    Banner,
+    AppFooter
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import './sass/reset';
+  @import './sass/base';
 </style>
