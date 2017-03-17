@@ -31,13 +31,13 @@
           <div class="column">
             <div>
               <img src="../assets/features/feature-1.png" />
-              <router-link to="/features/activity"><div class="bg-yellow item-1">科技课程</div></router-link>
+              <router-link to="/features/creative"><div class="bg-yellow item-1">创意课程</div></router-link>
             </div>
           </div>
           <div class="column">
             <router-link to="/features/course"><div class="bg-blue item-1">特色课程</div></router-link>
             <img src="../assets/features/feature-2.jpg" />
-            <router-link to="/features/creative"><div class="bg-orange item-2">创意课程</div></router-link>
+            <router-link to="/features/activity"><div class="bg-orange item-2">活动课程</div></router-link>
           </div>
           <div class="column">
             <img style="height: 150px;" src="../assets/features/feature-3.jpg" />
@@ -60,11 +60,13 @@
             <img src="../assets/left-arrow.png" />
           </span>
           <div class="playback">
-            <img src="../assets/playback/playback-1.jpg"/>
-            <img src="../assets/playback/playback-2.jpg"/>
-            <img src="../assets/playback/playback-3.jpg"/>
-            <img src="../assets/playback/playback-4.jpg"/>
-            <img src="../assets/playback/playback-5.jpg"/>
+            <div class="playback-inner">
+              <img src="../assets/playback/playback-1.jpg"/>
+              <img src="../assets/playback/playback-2.jpg"/>
+              <img src="../assets/playback/playback-3.jpg"/>
+              <img src="../assets/playback/playback-4.jpg"/>
+              <img src="../assets/playback/playback-5.jpg"/>
+            </div>
           </div>
           <span class="arrow-icon right">
             <img src="../assets/right-arrow.png"/>
@@ -82,52 +84,22 @@
     data () {
       return {
         api: RouterConst.activity.index.api,
-        lists: [
-          {
-          "id": 3,
-          "gallery": "http://ftle.iqiuqiu.me/uploads/20170314/14895025677698.jpg",
-          "title": "暑期班丨体验跆拳道 乐趣无限多2",
-          "created_at": "2017-03-12 01:14:08",
-          "views": 19
-          },
-          {
-            "id": 2,
-            "gallery": "http://ftle.iqiuqiu.me/uploads/20170314/14895025677698.jpg",
-            "title": "户外体验课丨警营开放日 萌娃探秘派出所",
-            "created_at": "2017-03-12 00:41:54",
-            "views": 18
-          },
-          {
-            "id": 1,
-            "gallery": "http://ftle.iqiuqiu.me/uploads/20170314/14895025677698.jpg",
-            "title": "户外体验课丨走进消防队 体验消防员",
-            "created_at": "2017-03-02 12:30:15",
-            "views": 5
-          }
-        ],
+        lists: [],
         activeId: 0,
       }
     },
     created () {
-      // test
-      setInterval(() => {
-        if (this.activeId === this.lists.length - 1) {
-          this.activeId = 0
-          return
-          }
-          this.activeId += 1
-        }, 4000)
-      // axios.get(this.api)
-      //   .then((resp) => {
-      //     this.lists = resp.data.list.slice(0, 5)
-      //     setInterval(() => {
-      //     if (this.activeId === this.lists.length - 1) {
-      //       this.activeId = 0
-      //       return
-      //       }
-      //       this.activeId += 1
-      //     }, 4000)
-      //   })
+      axios.get(this.api)
+        .then((resp) => {
+          this.lists = resp.data.list.slice(0, 5)
+          setInterval(() => {
+          if (this.activeId === this.lists.length - 1) {
+            this.activeId = 0
+            return
+            }
+            this.activeId += 1
+          }, 4000)
+        })
     },
     methods: {
       changeBanner (e) {
@@ -268,17 +240,21 @@
 
     .playback-wrap {
       position: relative;
+      overflow:hidden;
     }
 
     .playback {
       display: flex;
       width: 900px;
+      height: 140px;
       align-items: center;
       margin: 20px auto 0 auto;
       justify-content: space-around;
       img {
         width: 140px;
         height: 140px;
+        margin: 0 10px;
+        border-radius: 140px;
       }
     }
     .arrow-icon {
