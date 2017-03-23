@@ -159,7 +159,7 @@
       [data-id="6"] {
         ul {
           div {
-            padding-left: 600px;
+            padding-left: 500px;
           }
         }
       }

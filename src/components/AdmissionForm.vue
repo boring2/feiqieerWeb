@@ -4,7 +4,14 @@
     <div class="item"><input v-model="name" placeholder="宝宝姓名" type="text" name="name" /></div>
     <div class="item"><input v-model="phone" placeholder="联系电话" type="text" name="phone" /></div>
     <div class="item"><input v-model="babyAge" placeholder="宝宝年龄" type="number" name="baby_age" /></div>
-    <div class="item"><input v-model="time" placeholder="入学时间" type="datetime-local" name="appoint_time" /></div>
+    <div class="item">
+      <el-date-picker
+        v-model="time"
+        type="datetime"
+        placeholder="选择日期时间"
+      >
+      </el-date-picker>
+    </div>
     <div class="item"><span class="submit-button" @click="checkout">确定报名</span></div>
   </div>
 </template>
@@ -12,6 +19,7 @@
 <script>
   import RouterConst from '../config/RouterConst'
   import axios from 'axios'
+  import dateFormat from 'dateformat'
   export default {
     data () {
       return {
@@ -28,15 +36,15 @@
           name: this.name,
           phone: this.phone,
           baby_age: this.babyAge,
-          appoint_time: this.time.replace('T', ' ') + ':00'
+          appoint_time: dateFormat(this.time, 'yyyy-mm-dd HH:MM:ss')
         })
         .then(function (response) {
           if (response.status === 204) {
             alert('报名成功，请等待我们通知')
           }
         })
-        .catch(function (error, a,b) {
-          alert("提交失败，请检查你的手机号码是否正确")
+        .catch(function (error) {
+          alert(error.response.data)
         });
       }
     }
@@ -75,5 +83,25 @@
      padding: 10px 20px;
      cursor: pointer;
    }
+   input::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 3;
+    color: #bbb;
+  }
+  input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px #13529f;
+  }
  }
+  .el-input__icon {
+    right: 50px;
+  }
+  .el-input__icon+.el-input__inner {
+    width: 213px;
+    height: 34px;
+  }
+  .el-date-editor.el-input {
+    width: 100%;
+  }
 </style>

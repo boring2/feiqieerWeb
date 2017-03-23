@@ -15,10 +15,8 @@
       }
     },
     created () {
-      console.log('--id, ', this.$route.params.id)
       const url = `http://ftle.iqiuqiu.me/api/articles/${this.$route.params.id}`
       axios.get(url).then((resp) => {
-        console.log(resp)
         this.content = resp.data.content
         this.title = resp.data.title
       })

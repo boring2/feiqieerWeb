@@ -11,13 +11,14 @@ import Health from '@/pages/Health'
 import Teachers from '@/pages/Teachers'
 import Features from '@/pages/Features'
 import Activity from '@/pages/Activity'
+import Playback from '@/pages/Playback'
 import Admissions from '@/pages/Admissions'
 import Contacts from '@/pages/Contacts'
 import RouterConst from '../config/RouterConst'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',
@@ -107,6 +108,17 @@ export default new Router({
         {path: RouterConst.activity.index.href + '/:id', component: RightContent}
       ]
     },
+
+    // playback page
+    {
+      path: RouterConst.playbackPage.index.href,
+      component: Playback,
+      children: [
+        {path: '', component: ArticleList},
+        {path: RouterConst.playbackPage.index.href + '/:id', component: RightContent}
+      ]
+    },
+
     // concact page
     {
       path: RouterConst.contacts.index.href,

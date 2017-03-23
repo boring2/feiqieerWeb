@@ -56,19 +56,19 @@
         <h1 class="title">精彩回放</h1>
         <h5 class="title">收藏孩子的每一个成长瞬间！</h5>
         <div class="playback-wrap">
-          <span class="arrow-icon left">
+          <span class="arrow-icon left" @click="changeTransform($event, true)">
             <img src="../assets/left-arrow.png" />
           </span>
           <div class="playback">
             <div class="playback-inner">
-              <img src="../assets/playback/playback-1.jpg"/>
-              <img src="../assets/playback/playback-2.jpg"/>
-              <img src="../assets/playback/playback-3.jpg"/>
-              <img src="../assets/playback/playback-4.jpg"/>
-              <img src="../assets/playback/playback-5.jpg"/>
+              <div class="playback-list" :style="playbackListStyle">
+                <router-link v-for="(list, index) in playbackLists" :key="index" :to="'/playbackPage'+'/' + list.id">
+                  <img :src="list.gallery">
+                </router-link>
+              </div>
             </div>
           </div>
-          <span class="arrow-icon right">
+          <span class="arrow-icon right" @click="changeTransform">
             <img src="../assets/right-arrow.png"/>
           </span>
         </div>
@@ -85,7 +85,12 @@
       return {
         api: RouterConst.activity.index.api,
         lists: [],
+        playbackLists: [],
+        transformCount: 0,
         activeId: 0,
+        initCount: 5,
+        playListTimer: null,
+        maxPlayListLength: 20
       }
     },
     created () {
@@ -93,18 +98,64 @@
         .then((resp) => {
           this.lists = resp.data.list.slice(0, 5)
           setInterval(() => {
-          if (this.activeId === this.lists.length - 1) {
-            this.activeId = 0
-            return
-            }
-            this.activeId += 1
-          }, 4000)
+            if (this.activeId === this.lists.length - 1) {
+              this.activeId = 0
+              return
+              }
+              this.activeId += 1
+            }, 4000)
+        })
+
+      // playback list
+      axios.get(RouterConst.playback.index.api)
+        .then((resp) => {
+          this.playbackLists = resp.data.list.slice(0, this.maxPlayListLength)
+          this.setPlayListTimer()
         })
     },
     methods: {
       changeBanner (e) {
         const id = e.target.getAttribute('data-id')
         this.activeId = parseInt(id)
+      },
+      changeTransform(e, isLeft) {
+        clearInterval(this.playListTimer)
+        this.playListTimer = null
+        if (isLeft) {
+          this.changeTransformLeft()
+        } else {
+          this.changeTransformRight()
+        }
+        setTimeout(()=>{
+          this.setPlayListTimer()
+        }, 0)
+      },
+      changeTransformLeft () {
+        if(this.transformCount > 0) {
+          this.transformCount -= 1
+        }
+      },
+      changeTransformRight () {
+        if (this.transformCount + this.initCount < this.playbackLists.length) {
+          this.transformCount += 1
+        }
+      },
+      setPlayListTimer () {
+        this.playListTimer = setInterval(() => {
+          if (this.transformCount >= this.playbackLists.length - this.initCount) {
+            return
+            }
+            this.transformCount += 1
+          }, 5000)
+      }
+    },
+    computed: {
+      playbackListStyle() {
+        return {
+          width: this.playbackLists.length * 180 + 'px',
+          webkitTransform: `translateX(${-this.transformCount * 180}px)`,
+          transform: `translateX(${-this.transformCount * 180}px)`
+        }
       }
     }
   }
@@ -244,16 +295,24 @@
     }
 
     .playback {
-      display: flex;
       width: 900px;
       height: 140px;
       align-items: center;
       margin: 20px auto 0 auto;
-      justify-content: space-around;
+      .playback-inner {
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      .playback-list {
+        max-width: 3600px;
+        overflow: hidden;
+        transition: transform 1s;
+      }
       img {
+        float: left;
         width: 140px;
         height: 140px;
-        margin: 0 10px;
+        margin: 0 20px;
         border-radius: 140px;
       }
     }
@@ -261,6 +320,7 @@
       position: absolute;
       transform: translateY(-50%);
       top: 50%;
+      cursor: pointer;
       &.left {
         left: 10px;
       }

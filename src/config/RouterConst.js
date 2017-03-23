@@ -55,6 +55,11 @@ export default {
     index: {title: '园所动态', href: '/activity',shortLink: 'activity', api: 'http://ftle.iqiuqiu.me/api/articles?category_id=1'}
   },
 
+  // page activity
+  playbackPage: {
+    index: {title: '精彩回放', href: '/playbackPage',shortLink: 'playbackPage', api: 'http://ftle.iqiuqiu.me/api/articles?category_id=10'}
+  },
+
   // page contact
   contacts: {
     index: {title: '联系我们', href: '/contacts', shortLink: 'contacts', api: 'http://ftle.iqiuqiu.me/api/settings/us_contact_us'},
@@ -67,5 +72,9 @@ export default {
   post: {
     admission: {api: 'http://ftle.iqiuqiu.me/api/admission'},
     visit: {api: 'http://ftle.iqiuqiu.me/api/appointments'}
+  },
+  //playback
+  playback: {
+    index: {api: 'http://ftle.iqiuqiu.me/api/articles?category_id=10'}
   }
 }

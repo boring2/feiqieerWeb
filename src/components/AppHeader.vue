@@ -12,7 +12,8 @@
         <h2 class="english-title">FTLE Kindergarden</h2>
       </div>
       <div class="phone-number">
-        <img src="../assets/phone.png" />
+        <!--<img src="../assets/phone.png" />-->
+        <span>成长热线：</span>
         <span>020-12345678</span>
       </div>
       <div class="clear-both"></div>
@@ -40,6 +41,7 @@
     .phone-number {
       display: flex;
       justify-content: flex-end;
+      margin-top: 10px;
       span {
         margin-left: 5px;
         line-height: 28px;

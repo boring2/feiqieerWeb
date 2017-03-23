@@ -69,6 +69,7 @@
       display: inline-block;
       padding: 0 50px;
       text-align: center;
+      border-right: 1px solid;
     }
 
     .footer-left-top {
