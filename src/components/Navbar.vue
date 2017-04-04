@@ -33,8 +33,7 @@
             {title: RouterConst.about.histroy.title, href:RouterConst.about.histroy.href},
             {title: RouterConst.about.background.title, href:RouterConst.about.background.href},
             {title: RouterConst.about.word.title, href:RouterConst.about.word.href},
-            {title: RouterConst.about.rules.title, href:RouterConst.about.rules.href},
-            {title: RouterConst.about.contact.title, href:RouterConst.about.contact.href}
+            {title: RouterConst.about.rules.title, href:RouterConst.about.rules.href}
           ]},
           {title: RouterConst.features.index.title, href: RouterConst.features.index.href, active: false, children:[
             {title: RouterConst.features.course.title, href: RouterConst.features.course.href},

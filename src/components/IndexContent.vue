@@ -63,7 +63,7 @@
             <div class="playback-inner">
               <div class="playback-list" :style="playbackListStyle">
                 <router-link v-for="(list, index) in playbackLists" :key="index" :to="'/playbackPage'+'/' + list.id">
-                  <img :src="list.gallery">
+                  <img :src="list.gallery[0]">
                 </router-link>
               </div>
             </div>
