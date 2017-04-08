@@ -30,17 +30,14 @@
             {title: RouterConst.about.facility.title, href:RouterConst.about.facility.href},
             {title: RouterConst.about.features.title, href:RouterConst.about.features.href},
             {title: RouterConst.about.team.title, href:RouterConst.about.team.href},
-            {title: RouterConst.about.histroy.title, href:RouterConst.about.histroy.href},
             {title: RouterConst.about.background.title, href:RouterConst.about.background.href},
-            {title: RouterConst.about.word.title, href:RouterConst.about.word.href},
-            {title: RouterConst.about.rules.title, href:RouterConst.about.rules.href}
+            {title: RouterConst.about.word.title, href:RouterConst.about.word.href}
           ]},
           {title: RouterConst.features.index.title, href: RouterConst.features.index.href, active: false, children:[
             {title: RouterConst.features.course.title, href: RouterConst.features.course.href},
             {title: RouterConst.features.creative.title, href: RouterConst.features.creative.href},
             {title: RouterConst.features.activity.title, href: RouterConst.features.activity.href},
-            {title: RouterConst.features.parenting.title, href: RouterConst.features.parenting.href},
-            {title: RouterConst.features.interest.title, href: RouterConst.features.interest.href}
+            {title: RouterConst.features.parenting.title, href: RouterConst.features.parenting.href}
           ]},
           {title: RouterConst.activity.index.title, href: RouterConst.activity.index.href, active: false},
           {title: RouterConst.health.index.title, href: RouterConst.health.index.href, active: false, children: [

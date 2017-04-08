@@ -8,7 +8,7 @@ export default {
     features: {title: '园所特色', href:'/about/features', shortLink: 'features', api: 'http://ftle.iqiuqiu.me/api/settings/about_features'},
     team: {title: '我们团队', href:'/about/team', shortLink: 'team', api: 'http://ftle.iqiuqiu.me/api/settings/about_teams'},
     histroy: {title: '辉煌历程', href:'/about/histroy', shortLink: 'histroy', api: 'http://ftle.iqiuqiu.me/api/settings/about_glorious_history'},
-    background: {title: '教育背景', href:'/about/background', shortLink: 'background', api: 'http://ftle.iqiuqiu.me/api/settings/about_education_background'},
+    background: {title: '幼儿生活', href:'/about/background', shortLink: 'background', api: 'http://ftle.iqiuqiu.me/api/settings/about_education_background'},
     word: {title: '园长寄语', href:'/about/word', shortLink: 'word', api: 'http://ftle.iqiuqiu.me/api/settings/about_principal_message'},
     rules: {title: '规章制度', href:'/about/rules', shortLink: 'rules', api: 'http://ftle.iqiuqiu.me/api/settings/about_regulations'},
     contact: {title: '联系我们', href:'/about/contact', shortLink: 'contact', api: 'http://ftle.iqiuqiu.me/api/settings/about_contact_us'}
@@ -28,7 +28,7 @@ export default {
     index: {title: '课程特色', href: '/features', shortLink: 'features', api: 'http://ftle.iqiuqiu.me/api/settings/course_features'},
     course: {title: '特色课程', href: '/features/course', shortLink: 'course', api: 'http://ftle.iqiuqiu.me/api/settings/course_features'},
     creative: {title: '创意课程', href: '/features/creative', shortLink: 'creative', api: 'http://ftle.iqiuqiu.me/api/settings/course_creative'},
-    activity: {title: '活动课程', href: '/features/activity', shortLink: 'activity', api: 'http://ftle.iqiuqiu.me/api/settings/course_activity'},
+    activity: {title: '体育课程', href: '/features/activity', shortLink: 'activity', api: 'http://ftle.iqiuqiu.me/api/settings/course_activity'},
     parenting: {title: '亲子课程', href: '/features/parenting', shortLink: 'parenting', api: 'http://ftle.iqiuqiu.me/api/settings/course_parenting'},
     interest: {title: '兴趣课程', href: '/features/interest', shortLink: 'interest', api: 'http://ftle.iqiuqiu.me/api/settings/course_interest'}
   },

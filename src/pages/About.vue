@@ -33,10 +33,8 @@
           {title: RouterConst.about.facility.title, href:RouterConst.about.facility.href},
           {title: RouterConst.about.features.title, href:RouterConst.about.features.href},
           {title: RouterConst.about.team.title, href:RouterConst.about.team.href},
-          {title: RouterConst.about.histroy.title, href:RouterConst.about.histroy.href},
           {title: RouterConst.about.background.title, href:RouterConst.about.background.href},
-          {title: RouterConst.about.word.title, href:RouterConst.about.word.href},
-          {title: RouterConst.about.rules.title, href:RouterConst.about.rules.href}
+          {title: RouterConst.about.word.title, href:RouterConst.about.word.href}
         ],
         pageContent: '',
         cache: {}

@@ -31,8 +31,7 @@
           {title: RouterConst.features.course.title, href:RouterConst.features.course.href},
           {title: RouterConst.features.creative.title, href:RouterConst.features.creative.href},
           {title: RouterConst.features.activity.title, href:RouterConst.features.activity.href},
-          {title: RouterConst.features.parenting.title, href:RouterConst.features.parenting.href},
-          {title: RouterConst.features.interest.title, href:RouterConst.features.interest.href}
+          {title: RouterConst.features.parenting.title, href:RouterConst.features.parenting.href}
         ],
         pageContent: '',
         cache: {}
