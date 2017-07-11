@@ -96,7 +96,12 @@ export default new Router({
         {path: RouterConst.features.creative.href},
         {path: RouterConst.features.activity.href},
         {path: RouterConst.features.parenting.href},
-        {path: RouterConst.features.interest.href}
+        {path: RouterConst.features.interest.href},
+        {path: RouterConst.features.learnActivity.href},
+        {path: RouterConst.features.gameActivity.href},
+        {path: RouterConst.features.sportsActivity.href},
+        {path: RouterConst.features.lifeGuide.href},
+        {path: RouterConst.features.dailyRest.href},
       ]
     },
     // activity page

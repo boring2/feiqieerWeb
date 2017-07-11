@@ -31,10 +31,10 @@
           {title: RouterConst.about.intro.title, href:RouterConst.about.intro.href},
           {title: RouterConst.about.concept.title, href:RouterConst.about.concept.href},
           {title: RouterConst.about.facility.title, href:RouterConst.about.facility.href},
-          {title: RouterConst.about.features.title, href:RouterConst.about.features.href},
-          {title: RouterConst.about.team.title, href:RouterConst.about.team.href},
-          {title: RouterConst.about.background.title, href:RouterConst.about.background.href},
-          {title: RouterConst.about.word.title, href:RouterConst.about.word.href}
+          {title: RouterConst.about.features.title, href:RouterConst.about.features.href}
+          // {title: RouterConst.about.team.title, href:RouterConst.about.team.href},
+          // {title: RouterConst.about.background.title, href:RouterConst.about.background.href},
+          // {title: RouterConst.about.word.title, href:RouterConst.about.word.href}
         ],
         pageContent: '',
         cache: {}

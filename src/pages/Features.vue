@@ -29,9 +29,14 @@
         title: RouterConst.features.index.title,
         sidebarItems: [
           {title: RouterConst.features.course.title, href:RouterConst.features.course.href},
-          {title: RouterConst.features.creative.title, href:RouterConst.features.creative.href},
-          {title: RouterConst.features.activity.title, href:RouterConst.features.activity.href},
-          {title: RouterConst.features.parenting.title, href:RouterConst.features.parenting.href}
+          // {title: RouterConst.features.creative.title, href:RouterConst.features.creative.href},
+          // {title: RouterConst.features.activity.title, href:RouterConst.features.activity.href},
+          // {title: RouterConst.features.parenting.title, href:RouterConst.features.parenting.href}
+          {title: RouterConst.features.learnActivity.title, href: RouterConst.features.learnActivity.href},
+          {title: RouterConst.features.gameActivity.title, href: RouterConst.features.gameActivity.href},
+          {title: RouterConst.features.sportsActivity.title, href: RouterConst.features.sportsActivity.href},
+          {title: RouterConst.features.lifeGuide.title, href: RouterConst.features.lifeGuide.href},
+          {title: RouterConst.features.dailyRest.title, href: RouterConst.features.dailyRest.href}
         ],
         pageContent: '',
         cache: {}

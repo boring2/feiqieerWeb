@@ -9,6 +9,7 @@
 
 <script>
   import axios from 'axios'
+  import {baseApi} from '../config/RouterConst'
   export default {
     data () {
       return {
@@ -18,7 +19,7 @@
       }
     },
     created () {
-      const url = 'http://ftle.iqiuqiu.me/api/carousels'
+      const url = `${baseApi}/carousels`
       axios.get(url).then((resp) => {
         this.lists = resp.data.list
         setInterval(() => {

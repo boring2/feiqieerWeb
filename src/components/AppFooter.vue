@@ -8,7 +8,7 @@
         </div>
         <div class="footer-left-bottom">
           <router-link :to="careers"><div>招贤纳士</div></router-link>
-          <router-link :to="join"><div>加盟我们</div></router-link>
+          <router-link :to="join"><div style="margin-top: 20px;">加盟我们</div></router-link>
         </div>
       </div>
       <div class="footer-right">
@@ -21,12 +21,12 @@
         </div>
         <div class="footer-right-bottom">
           <div class="left">
-            <div>电话：020-12345678</div>
+            <div>电话：020-89282586/89282062</div>
             <div>邮编：510000</div>
-            <div>地址：广州市天河区</div>
+            <div>地址：广州市天河区粤垦路侨源二街13号</div>
           </div>
           <div class="right">
-            <img src="../assets/erweima.png" />
+            <img src="../assets/erweima.jpg" width="70px;"/>
           </div>
         </div>
       </div>

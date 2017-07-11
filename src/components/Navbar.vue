@@ -28,16 +28,21 @@
             {title: RouterConst.about.intro.title, href:RouterConst.about.intro.href},
             {title: RouterConst.about.concept.title, href:RouterConst.about.concept.href},
             {title: RouterConst.about.facility.title, href:RouterConst.about.facility.href},
-            {title: RouterConst.about.features.title, href:RouterConst.about.features.href},
-            {title: RouterConst.about.team.title, href:RouterConst.about.team.href},
-            {title: RouterConst.about.background.title, href:RouterConst.about.background.href},
-            {title: RouterConst.about.word.title, href:RouterConst.about.word.href}
+            {title: RouterConst.about.features.title, href:RouterConst.about.features.href}
+            // {title: RouterConst.about.team.title, href:RouterConst.about.team.href},
+            // {title: RouterConst.about.background.title, href:RouterConst.about.background.href},
+            // {title: RouterConst.about.word.title, href:RouterConst.about.word.href}
           ]},
           {title: RouterConst.features.index.title, href: RouterConst.features.index.href, active: false, children:[
             {title: RouterConst.features.course.title, href: RouterConst.features.course.href},
-            {title: RouterConst.features.creative.title, href: RouterConst.features.creative.href},
-            {title: RouterConst.features.activity.title, href: RouterConst.features.activity.href},
-            {title: RouterConst.features.parenting.title, href: RouterConst.features.parenting.href}
+            // {title: RouterConst.features.creative.title, href: RouterConst.features.creative.href},
+            // {title: RouterConst.features.activity.title, href: RouterConst.features.activity.href},
+            // {title: RouterConst.features.parenting.title, href: RouterConst.features.parenting.href},
+            {title: RouterConst.features.learnActivity.title, href: RouterConst.features.learnActivity.href},
+            {title: RouterConst.features.gameActivity.title, href: RouterConst.features.gameActivity.href},
+            {title: RouterConst.features.sportsActivity.title, href: RouterConst.features.sportsActivity.href},
+            {title: RouterConst.features.lifeGuide.title, href: RouterConst.features.lifeGuide.href},
+            {title: RouterConst.features.dailyRest.title, href: RouterConst.features.dailyRest.href}
           ]},
           {title: RouterConst.activity.index.title, href: RouterConst.activity.index.href, active: false},
           {title: RouterConst.health.index.title, href: RouterConst.health.index.href, active: false, children: [

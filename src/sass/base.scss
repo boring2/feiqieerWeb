@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "huakang";
+  src: url("/static/fonts/huakang.ttc");
+}
+
 body {
   color: #fff;
-  font-family: "微软雅黑",Arial;
+  font-family: "huakang", "微软雅黑", Arial;
   min-width: 1024px;
 }
 .right {

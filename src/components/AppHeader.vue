@@ -1,21 +1,20 @@
 <template>
   <header>
     <div class="wrap">
-      <div class="user-info" style="display: none">
+      <!--<div class="user-info" style="display: none">
         游客，欢迎您
         <a href="#">[登录]</a>
         <a href="#">[免费注册]</a>
         <a href="#">[忘记密码]</a>
-      </div>
+      </div>-->
       <div class="title">
         <h1 class="chinese-title">菲切尔国际幼儿园</h1>
         <h2 class="english-title">FTLE Kindergarden</h2>
       </div>
-      <div class="phone-number">
-        <!--<img src="../assets/phone.png" />-->
+      <!--<div class="phone-number">
         <span>成长热线：</span>
         <span>020-12345678</span>
-      </div>
+      </div>-->
       <div class="clear-both"></div>
     </div>
   </header>
@@ -29,7 +28,7 @@
 <style lang="scss">
   @import '../sass/variables';
   header {
-    background: $color-head-footer;
+    background: #ffffff;
     height: 140px;
     a {
       color: #fff;
