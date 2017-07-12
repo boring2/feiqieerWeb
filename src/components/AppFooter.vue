@@ -19,15 +19,19 @@
             <span>官方微信</span>
           </div>
         </div>
+        <div class="right">
+          <div>
+            <img src="../assets/erweima.jpg" width="70px;"/>
+            <div class="subscribe-number">订阅号</div>
+          </div>
+        </div>
         <div class="footer-right-bottom">
           <div class="left">
             <div>电话：020-89282586/89282062</div>
             <div>邮编：510000</div>
             <div>地址：广州市天河区粤垦路侨源二街13号</div>
           </div>
-          <div class="right">
-            <img src="../assets/erweima.jpg" width="70px;"/>
-          </div>
+
         </div>
       </div>
     </div>
@@ -70,14 +74,17 @@
       padding: 0 50px;
       text-align: center;
       border-right: 1px solid;
+      border-style: dashed;
     }
 
     .footer-left-top {
       margin-bottom: 15px;
+      font-size: 20px;
     }
 
     .wechat {
-      width: 34px;
+      width: 35px;
+      margin-right: -10px;
     }
     .footer-left-bottom {
       div {
@@ -89,17 +96,23 @@
     }
     .footer-right {
       display: inline-block;
-      width: 770px;
+      width: 730px;
       padding-left: 50px;
     }
     .footer-right-top {
+      display: inline-block;
       margin-bottom: 10px;
       line-height: 36px;
       background: rgba(255,255,255, .4);
       padding: 0 10px;
+      width: 550px;
       img {
         vertical-align: bottom;
       }
+    }
+    .subscribe-number {
+      text-align: center;
+      margin-top: 10px;
     }
     .footer-right-bottom {
       div {

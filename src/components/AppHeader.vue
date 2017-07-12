@@ -1,16 +1,19 @@
 <template>
   <header>
     <div class="wrap">
+      <div class="logo-wrap">
+        <img src="../assets/logo.jpg" class="logo-title"/>
+      </div>
       <!--<div class="user-info" style="display: none">
         游客，欢迎您
         <a href="#">[登录]</a>
         <a href="#">[免费注册]</a>
         <a href="#">[忘记密码]</a>
       </div>-->
-      <div class="title">
+      <!--<div class="title">
         <h1 class="chinese-title">菲切尔国际幼儿园</h1>
         <h2 class="english-title">FTLE Kindergarden</h2>
-      </div>
+      </div>-->
       <!--<div class="phone-number">
         <span>成长热线：</span>
         <span>020-12345678</span>
@@ -36,6 +39,14 @@
     }
     .wrap {
       padding: 10px 100px;
+    }
+    .logo-wrap {
+      text-align: center;
+      .logo-title {
+        height: 100px;
+        display: inline-block;
+        text-align: center;
+      }
     }
     .phone-number {
       display: flex;
